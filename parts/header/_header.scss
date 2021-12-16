@@ -1,0 +1,111 @@
+@import "../mixins/index";
+@import "../variables/index";
+@import "_variables";
+
+.site-header {
+	.site-branding {
+		height: 102px;
+		.logo-wrapper {
+			width: 300px;
+			padding: 20px 20px 0 20px;
+		}
+		a {
+			display: block;
+
+			img {
+				width: 100%;
+				margin: 0 auto;
+			}
+		}
+	}
+
+	.site-description {
+		display: flex;
+		position: relative;
+		width: 100%;
+		padding: 20px 20px;
+		color: #fff;
+		background: $color__blue-dk;
+		font-family: "Pluto Sans";
+		font-size: 24px;
+		text-align: center;
+		text-transform: uppercase;
+
+		p {
+			margin: auto;
+		}
+	}
+
+	.site-branding .site-description {
+		display: none;
+	}
+
+	.header-main {
+		display: flex;
+		position: relative;
+
+		align-items: center;
+	}
+}
+
+@include bp($breakpoint__sm) {
+	.site-header {
+		height: auto;
+		.site-branding {
+			display: flex;
+			height: $header_height;
+
+			.logo-wrapper {
+				min-width: 310px;
+				padding-top: 30px;
+			}
+
+			.site-description {
+				display: flex;
+			}
+		}
+
+		.header-mobile {
+			display: none;
+		}
+
+		.header-main {
+			display: block;
+		}
+	}
+}
+
+@include bp($breakpoint__md) {
+	.site-header {
+		.site-branding {
+			.logo-wrapper {
+				min-width: 400px;
+			}
+
+			img {
+				min-width: 343px;
+			}
+		}
+	}
+}
+
+@include bp($breakpoint__xl) {
+	.site-header {
+		@include universal-max-width;
+
+		.site-branding {
+			.logo-wrapper {
+				min-width: 428px;
+				padding: 21px 40px 0 40px;
+
+				img {
+					min-width: 343px;
+				}
+			}
+
+			.site-description {
+				font-size: 28px;
+			}
+		}
+	}
+}

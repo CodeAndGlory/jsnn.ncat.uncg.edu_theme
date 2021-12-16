@@ -1,0 +1,50 @@
+@import "../../../mixins/index";
+@import "../../../variables/index";
+$color__text-th: $color__white;
+$color__background-th: $color__gray-dk;
+$color__border: $color__white;
+$color__background-even: #ededed;
+$color__background-odd: #f4f4f4;
+
+.table-wrapper {
+	@include universal-max-width;
+	@include universal-padding;
+	@include universal-bottom-margin;
+}
+
+@include side-nav-padding(table-wrapper);
+
+.table {
+	thead th {
+		border: 0;
+		color: $color__text-th;
+		background: $color__background-th;
+		font-family: $font__secondary;
+		text-transform: uppercase;
+	}
+
+	td {
+		border: 0;
+	}
+
+	&,
+	thead th,
+	th,
+	td {
+		border: 1px solid $color__border;
+		border-collapse: collapse;
+	}
+
+	td,
+	th {
+		padding: 0.4rem 3rem;
+	}
+}
+
+.table-striped tbody tr:nth-of-type(odd) {
+	background-color: $color__background-odd;
+}
+
+.table-striped tbody tr:nth-of-type(even) {
+	background-color: $color__background-even;
+}

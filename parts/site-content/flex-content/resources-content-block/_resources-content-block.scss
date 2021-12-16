@@ -1,0 +1,125 @@
+@import "../../../mixins/index";
+@import "../../../variables/index";
+
+.resources-content-block {
+	@include universal-max-width;
+	@include universal-padding;
+	@include universal-bottom-margin;
+
+	margin-top: 75px;
+
+	.resources-wrapper {
+		.resources-column {
+			$icon-directory: "parts/site-content/flex-content/resources-content-block/icons/";
+			.resource-item {
+				margin-bottom: 23px;
+				padding: 123px 40px 30px 40px;
+				background-color: #faf9f5;
+
+				.resource-heading {
+					margin-bottom: 30px;
+					text-align: center;
+				}
+
+				.resource-text {
+					font-size: 16px;
+					font-weight: $font__weight-regular;
+				}
+			}
+
+			[class*="icon-"] {
+				background-repeat: no-repeat;
+				background-position: top center;
+			}
+
+			.icon-none {
+				padding-top: 35px;
+			}
+
+			.icon-computer {
+				background-image: url(#{$icon-directory}icon-computer.svg);
+				background-position-y: 38px;
+				background-size: 70.424px 70.424px;
+			}
+
+			.icon-location {
+				background-image: url(#{$icon-directory}icon-location.svg);
+				background-position-y: 27px;
+				background-size: 55.829px 74.432px;
+			}
+
+			.icon-greensboro-star {
+				background-image: url(#{$icon-directory}icon-greensboro-star.svg);
+				background-position-y: 42px;
+				background-size: 150px 56px;
+			}
+
+			.icon-speech-bubbles {
+				background-image: url(#{$icon-directory}icon-speech-bubbles.svg);
+				background-position-y: 24px;
+				background-size: 113.451px 74.432px;
+			}
+
+			.icon-heart-handshake {
+				background-image: url(#{$icon-directory}icon-heart-handshake.svg);
+				background-position-y: 28px;
+				background-size: 75px 68.72px;
+			}
+
+			.icon-form {
+				background-image: url(#{$icon-directory}icon-form.svg);
+				background-position-y: 28px;
+				background-size: 75px 75px;
+			}
+
+			.icon-institutional-resources {
+				background-image: url(#{$icon-directory}icon-institutional-resources.svg);
+				background-position-y: 28px;
+				background-size: 115.06px 77.15px;
+			}
+
+			.icon-lab-flask {
+				background-image: url(#{$icon-directory}icon-lab-flask.svg);
+				background-position-y: 28px;
+				background-size: 56.93px 75px;
+			}
+
+			.icon-crossroad-sign {
+				background-image: url(#{$icon-directory}icon-crossroad-sign.svg);
+				background-position-y: 28px;
+				background-size: 57.61px 75px;
+			}
+
+			.icon-wrench {
+				background-image: url(#{$icon-directory}icon-wrench.svg);
+				background-position-y: 28px;
+				background-size: 75px 75px;
+			}
+
+			.icon-megaphone {
+				background-image: url(#{$icon-directory}icon-megaphone.svg);
+				background-position-y: 28px;
+				background-size: 64.29px 75px;
+			}
+
+			.icon-light-bulb {
+				background-image: url(#{$icon-directory}icon-light-bulb.svg);
+				background-position-y: 28px;
+				background-size: 54px 75px;
+			}
+		}
+	}
+}
+
+@include side-nav-padding(resources-content-block);
+
+@include bp($breakpoint__md) {
+	.resources-content-block {
+		.resources-wrapper {
+			display: grid;
+
+			grid-column-gap: 23px;
+			grid-template-columns: 1fr 1fr 1fr;
+		}
+	}
+}

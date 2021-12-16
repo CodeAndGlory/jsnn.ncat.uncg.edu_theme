@@ -1,0 +1,99 @@
+@import "../mixins/index";
+@import "../variables/index";
+$color__text-pagination: $color__white;
+
+.pagination.spartan-pagination {
+	@include center-block;
+
+	clear: both;
+	overflow: hidden;
+	margin: 40px 0;
+	padding: 0;
+	border-radius: 0;
+	font-family: $font__main;
+	font-weight: 700;
+	text-align: center;
+	text-transform: uppercase;
+
+	img {
+		vertical-align: inherit;
+	}
+
+	li {
+		&:before {
+			display: none;
+		}
+
+		&:first-child,
+		&:last-child {
+			a {
+				width: 34px;
+				padding: 9px 0 5px;
+			}
+		}
+
+		&:first-child {
+			a {
+				padding-right: 2px;
+			}
+		}
+
+		&:last-child {
+			a {
+				padding-left: 2px;
+			}
+		}
+
+		a {
+			&:hover {
+				text-decoration: none;
+			}
+
+			&.disabled {
+				background: transparent;
+				cursor: default;
+			}
+		}
+	}
+
+	ul {
+		margin: 0;
+		padding: 0;
+
+		li {
+			display: block;
+			float: left;
+			margin: 0;
+			padding: 0;
+			text-align: center;
+			text-indent: 0;
+			list-style-type: none;
+
+			a {
+				display: block;
+				width: 36px;
+				margin: 0 2px;
+				padding: 8px 0;
+				color: $color__text-pagination;
+				font-size: 18px;
+				text-decoration: none;
+
+				svg path {
+					fill: $color__text-pagination;
+					stroke: $color__text-pagination;
+				}
+			}
+		}
+	}
+
+	.spartan-pagination-location-text {
+		margin-bottom: -10px;
+	}
+}
+
+.spartan-pagination-nav-buttons {
+	display: flex;
+	margin-top: 15px;
+
+	justify-content: center;
+}

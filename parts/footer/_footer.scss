@@ -1,0 +1,103 @@
+@import "../mixins/index";
+@import "../variables/index";
+
+.site-footer {
+	@include universal-max-width;
+	@include universal-padding;
+
+	padding-top: 40px;
+	color: $color__white;
+	background: $color__blue-dk;
+	font-size: 14px;
+
+	a {
+		color: $color__white;
+
+		&:active,
+		&:focus,
+		&:hover,
+		&:focus {
+			color: $color__white;
+		}
+	}
+
+	.site-info {
+		.footer-column {
+			margin-bottom: 40px;
+			h2:first-child,
+			h3:first-child,
+			h4:first-child {
+				margin-top: 0;
+			}
+		}
+
+		p,
+		ol,
+		ul {
+			margin-bottom: 8px;
+		}
+	}
+
+	ul.footer-social-media-links {
+		display: flex;
+		margin: 16px 0 0 0;
+		padding: 0;
+		list-style: none;
+
+		li {
+			margin-right: 8px;
+			margin-bottom: 8px;
+		}
+	}
+}
+
+@include bp($breakpoint__sm) {
+	.site-footer {
+		.site-info {
+			display: grid;
+
+			column-gap: 40px;
+			grid-template-columns: 1fr 1fr;
+
+			.footer-column {
+				margin-bottom: 40px;
+
+				&:last-child {
+					margin-right: 0;
+				}
+			}
+		}
+	}
+}
+
+@include bp($breakpoint__sm) {
+	.site-footer {
+		.site-info {
+			grid-template-columns: 1fr 1fr 1fr;
+		}
+	}
+}
+
+@include bp($breakpoint__lg) {
+	.site-footer {
+		.site-info {
+			column-gap: 60px;
+			grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+		}
+	}
+}
+
+.site-footer {
+	.mc4wp-form-fields {
+		input {
+			margin-bottom: 12px;
+			font-size: 14px;
+		}
+
+		ul {
+			margin-left: 18px;
+			padding-left: 18px ;
+			text-indent: -18px ;
+		}
+	}
+}

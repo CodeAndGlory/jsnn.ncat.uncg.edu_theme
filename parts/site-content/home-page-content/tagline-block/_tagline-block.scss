@@ -1,0 +1,53 @@
+@import "../../../mixins/index";
+@import "../../../variables/index";
+
+.tagline-block {
+	@include universal-max-width;
+	@include universal-padding;
+	@include universal-bottom-margin;
+
+	.tagline-block-tagline {
+		margin-bottom: 50px;
+		h1 {
+			color: #000;
+			font-family: $font__main;
+			font-size: 60px;
+			line-height: 1.2;
+			text-transform: none;
+		}
+	}
+
+	.tagline-block-introduction {
+		font-size: 20px;
+	}
+}
+
+@include bp($breakpoint__md) {
+	.tagline-block {
+		display: flex;
+
+		.tagline-block-tagline {
+			margin-right: 30px;
+
+			flex: 0 0 400px;
+		}
+	}
+}
+
+@include bp($breakpoint__lg) {
+	.tagline-block {
+		.tagline-block-tagline {
+			margin-right: 108px;
+
+			flex: 0 0 500px;
+
+			h1 {
+				font-size: 72px;
+			}
+		}
+
+		.tagline-block-introduction {
+			font-size: 24px;
+		}
+	}
+}

@@ -1,0 +1,13 @@
+<svg alt="" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="35.4px"
+     height="35.4px" viewBox="0 0 35.4 35.4" style="enable-background:new 0 0 35.4 35.4;" xml:space="preserve">
+<style type="text/css">
+	.accordion-icon-plus {
+        fill:none;
+        stroke-width:2;
+        stroke-miterlimit:10;
+    }
+</style>
+    <line class="st0 accordion-icon-plus vertical-line" x1="17.7" y1="7" x2="17.7" y2="28.4"/>
+    <line class="st0 accordion-icon-plus horizontal-line" x1="28.4" y1="17.7" x2="7" y2="17.7"/>
+    <circle class="st0 accordion-icon-plus circle" cx="17.7" cy="17.7" r="16.7"/>
+</svg>

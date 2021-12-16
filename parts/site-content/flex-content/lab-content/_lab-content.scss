@@ -1,0 +1,29 @@
+@import "../../../mixins/index";
+@import "../../../variables/index";
+
+.lab-content {
+	@include universal-max-width;
+	@include universal-padding;
+	@include universal-bottom-margin;
+
+	ul.lab-details {
+		margin: 15px 0 38px 0;
+		padding: 0;
+		font-family: $font__secondary;
+		font-size: 24px;
+		font-weight: bold;
+		text-transform: uppercase;
+		list-style: none;
+
+		li {
+			margin: 0;
+			padding: 0;
+		}
+	}
+
+	.lab-description {
+		font-size: 24px;
+	}
+}
+
+@include side-nav-padding(lab-content);

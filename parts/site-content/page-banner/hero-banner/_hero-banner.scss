@@ -1,0 +1,69 @@
+.hero-banner {
+	@include universal-max-width;
+
+	position: relative;
+	margin-bottom: 40px;
+
+	.hero-text-box {
+		padding: 20px;
+		opacity: 1 !important;
+		color: #fff;
+		background: #12284c;
+		font-family: $font__main;
+		font-weight: $font__weight-light;
+		text-align: center;
+
+		h4 {
+			color: #fff;
+		}
+
+		.hero-link {
+			display: table;
+			margin: 0 auto 10px auto;
+			margin-top: 40px;
+			padding: 8px 28px;
+			border-radius: 5px;
+			background: $color__link;
+			font-family: $font__secondary;
+			font-size: 24px;
+			font-weight: bold;
+			text-decoration: none;
+			text-transform: uppercase;
+
+			&,
+			&:visited {
+				color: #fff;
+			}
+
+			&:hover,
+			&:focus {
+				color: $color__white;
+				background-color: $color__link;
+			}
+		}
+	}
+}
+
+@include bp($breakpoint__md) {
+	.hero-banner {
+		.hero-text-box {
+			position: absolute;
+			top: $padding__tablet;
+			right: $padding__tablet;
+			bottom: unset;
+			left: unset;
+			width: 367px;
+			background: rgba(0, 0, 0, 0.7);
+		}
+	}
+}
+
+@include bp($breakpoint__xl) {
+	.hero-banner {
+		.hero-text-box {
+			top: $padding__full;
+			right: $padding__full;
+			padding: 40px;
+		}
+	}
+}

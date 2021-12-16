@@ -1,0 +1,70 @@
+@import "../../../mixins/index";
+@import "../../../variables/index";
+
+.latest-news-block {
+	@include universal-max-width;
+	@include universal-padding;
+	@include universal-bottom-margin;
+
+	h2 {
+		margin-top: 0;
+		margin-bottom: 32px;
+	}
+
+	h3 {
+		margin-top: 0;
+		margin-bottom: 18px;
+		font-family: $font__main;
+		font-size: 24px;
+		font-weight: 500;
+	}
+
+	p {
+		margin-bottom: 4px;
+	}
+
+	.excerpt-col {
+		margin-bottom: 64px;
+	}
+
+	a.news-link {
+		display: table;
+		margin: 0 0 10px 0;
+		margin-top: 40px;
+		padding: 8px 28px;
+		border-radius: 5px;
+		background: $color__link;
+		font-family: $font__secondary;
+		font-size: 24px;
+		font-weight: bold;
+		text-decoration: none;
+		text-transform: uppercase;
+
+		&,
+		&:visited {
+			color: #fff;
+		}
+
+		&:hover,
+		&:focus {
+			color: $color__white;
+			background-color: $color__link;
+		}
+	}
+}
+
+@include bp($breakpoint__md) {
+	.latest-news-block {
+		.excerpt-col-wrapper {
+			display: grid;
+
+			grid-column-gap: 72px;
+			grid-row-gap: 0;
+			grid-template-columns: 1fr 1fr 1fr;
+		}
+
+		.excerpt-col {
+			margin-bottom: 55px;
+		}
+	}
+}

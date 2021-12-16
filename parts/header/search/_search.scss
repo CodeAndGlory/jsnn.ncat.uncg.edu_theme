@@ -1,0 +1,84 @@
+@import "../../mixins/index";
+@import "../../variables/index";
+$color__search-button: $color__blue-dk;
+$color__background-search-button: $color__white;
+@import "../_variables";
+
+.search-button {
+	padding: 10px;
+	background-color: transparent;
+
+	&:active,
+	&:focus,
+	&:hover {
+		background-color: transparent;
+	}
+
+	&:focus {
+		outline: 1px dotted #000;
+	}
+
+	svg {
+		overflow: visible;
+		width: 22px;
+		height: 22px;
+
+		.st0 {
+			fill: $color__search-button;
+			stroke: $color__search-button;
+		}
+	}
+}
+
+.search-box {
+	display: none;
+	position: absolute;
+	z-index: 999;
+	top: $mobile_header_height;
+	right: 0;
+	left: 0;
+
+	input,
+	label {
+		box-sizing: border-box;
+		width: 100%;
+	}
+
+	input {
+		padding: 5px 14px;
+		border: 1.5px solid $color__search-button;
+		border-radius: 0;
+	}
+
+	.search-submit {
+		display: none;
+	}
+
+	@media screen and (min-width: $breakpoint__sm) {
+		left: $padding__tablet;
+
+		input,
+		label {
+			width: 400px;
+		}
+	}
+}
+
+@include bp($breakpoint__md) {
+	.search-box {
+		right: $padding__tablet;
+		left: initial;
+	}
+}
+
+@include bp($breakpoint__lg) {
+	.search-box {
+		top: 118px;
+	}
+}
+
+@include bp($breakpoint__xl) {
+	.search-box {
+		right: $padding__tablet + 73px;
+	}
+}

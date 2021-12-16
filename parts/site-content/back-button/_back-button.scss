@@ -1,0 +1,44 @@
+@import "../../variables/index";
+
+.back-button {
+	@include universal-max-width;
+	@include universal-padding;
+	@include universal-bottom-margin;
+
+	a {
+		display: inline-block;
+		position: relative;
+		padding: 5px 25px 9px 40px;
+		background: $color__blue-dk;
+		font-family: $font__secondary;
+		font-size: 21px;
+		font-weight: bold;
+		text-decoration: none;
+		text-transform: uppercase;
+
+		&:before {
+			position: absolute;
+			top: 14px;
+			left: 12px;
+			width: 0;
+			height: 0;
+			border-width: 8.5px 11px 8.5px 0;
+			border-style: solid;
+			border-color: transparent #fff transparent transparent;
+			content: "";
+		}
+
+		&,
+		&:focus,
+		&:visited {
+			color: #fff;
+		}
+
+		&:hover,
+		&:focus {
+			text-decoration: underline;
+		}
+	}
+}
+
+@include side-nav-padding(back-button);

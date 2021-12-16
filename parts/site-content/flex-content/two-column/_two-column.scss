@@ -1,0 +1,19 @@
+@import "../../../mixins/index";
+@import "../../../variables/index";
+
+.two-column {
+	@include universal-max-width;
+	@include universal-padding;
+	@include universal-bottom-margin;
+}
+
+@include bp($breakpoint__md) {
+	.two-column {
+		display: grid;
+
+		column-gap: 100px;
+		grid-template-columns: 1fr 1fr;
+	}
+}
+
+@include side-nav-padding(two-column);

@@ -1,0 +1,69 @@
+@import "../../../mixins/index";
+@import "../../../variables/index";
+
+.accordion-content {
+	@include universal-max-width;
+	@include universal-padding;
+	@include universal-bottom-margin;
+
+
+	div[id^="heading_"] {
+		h4 {
+			margin-top: 0;
+		}
+	}
+
+	.accordion-btn {
+		display: block;
+		position: relative;
+		width: 100%;
+		padding: 20px 20px 20px 50px;
+		color: #000;
+		background-color: transparent;
+		font-size: 28px;
+		font-weight: bold;
+		text-align: left;
+
+		&:focus {
+			//outline: 1px dotted $color__gray-md;
+		}
+
+		svg {
+			position: absolute;
+			top: 50%;
+			left: 0;
+			width: 34px;
+			height: 34px;
+			transform: translateY(-50%);
+
+			.st0 {
+				stroke: $color__orange;
+			}
+		}
+
+		&[aria-expanded="true"] {
+			svg {
+				.vertical-line {
+					display: none;
+				}
+			}
+		}
+	}
+
+	.accordion-card-body {
+		padding-top: 2px;
+		padding-left: 50px;
+	}
+}
+
+@include side-nav-padding(accordion-content);
+
+@include bp($breakpoint__md) {
+	.accordion-card-body {
+		.supsystic-tables-wrap {
+			overflow-x: auto;
+			overflow-y: hidden;
+			white-space: nowrap;
+		}
+	}
+}

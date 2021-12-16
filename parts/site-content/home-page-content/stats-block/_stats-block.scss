@@ -1,0 +1,60 @@
+@import "../../../mixins/index";
+@import "../../../variables/index";
+
+.stats-block {
+	@include universal-max-width;
+	@include universal-padding;
+	@include universal-bottom-margin;
+
+	.stats-col {
+		max-width: 275px;
+		margin-bottom: 60px;
+	}
+
+	.stats-heading {
+		margin-bottom: 0;
+		color: #606166;
+		font-family: $font__main;
+		font-size: 21px;
+		font-weight: bold;
+		text-transform: uppercase;
+	}
+
+	span {
+		color: $color__orange;
+		font-family: $font__secondary;
+		font-size: 100px;
+		font-weight: bold;
+		line-height: 1.2;
+
+		&.stats-percentage:after {
+			content: "%";
+		}
+	}
+}
+
+@include bp($breakpoint__xs + 250px) {
+	.stats-block {
+		display: grid;
+
+		grid-column-gap: 20px;
+		grid-row-gap: 10px;
+		grid-template-columns: 1fr 1fr;
+		justify-content: space-around;
+	}
+}
+
+@include bp($breakpoint__lg) {
+	.stats-block {
+		grid-row-gap: 0;
+		grid-template-columns: 1fr 1fr 1fr 1fr;
+
+		h4 {
+			margin-bottom: 9px;
+		}
+
+		.stats-col {
+			margin-bottom: 20px;
+		}
+	}
+}

@@ -1,0 +1,286 @@
+{
+    "key": "group_5df6c11ee9c79",
+    "title": "Page Options",
+    "fields": [
+        {
+            "key": "field_5e1b57f39fa47",
+            "label": "Enable Hero Banner",
+            "name": "enable_hero_banner",
+            "type": "true_false",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_5e1b5ac3d6501",
+                        "operator": "!=",
+                        "value": "1"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "message": "",
+            "default_value": 0,
+            "ui": 0,
+            "ui_on_text": "",
+            "ui_off_text": ""
+        },
+        {
+            "key": "field_5e1b58409fa48",
+            "label": "Hero Image",
+            "name": "hero_image",
+            "type": "image",
+            "instructions": "Required image dimensions: 1400x550",
+            "required": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_5e1b57f39fa47",
+                        "operator": "==",
+                        "value": "1"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "return_format": "array",
+            "preview_size": "full",
+            "library": "all",
+            "min_width": 1400,
+            "min_height": 550,
+            "min_size": "",
+            "max_width": 1400,
+            "max_height": 550,
+            "max_size": "",
+            "mime_types": ""
+        },
+        {
+            "key": "field_5e1b58de1c5c6",
+            "label": "Hero Banner Text",
+            "name": "hero_banner_text",
+            "type": "wysiwyg",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_5e1b57f39fa47",
+                        "operator": "==",
+                        "value": "1"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "tabs": "all",
+            "toolbar": "basic",
+            "media_upload": 1,
+            "delay": 0
+        },
+        {
+            "key": "field_5e1b59561c5c7",
+            "label": "Hero Banner Link",
+            "name": "hero_banner_link",
+            "type": "link",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_5e1b57f39fa47",
+                        "operator": "==",
+                        "value": "1"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "return_format": "array"
+        },
+        {
+            "key": "field_5e1b5ac3d6501",
+            "label": "Enable Page Banner",
+            "name": "enable_page_banner",
+            "type": "true_false",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_5e1b57f39fa47",
+                        "operator": "!=",
+                        "value": "1"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "message": "",
+            "default_value": 0,
+            "ui": 0,
+            "ui_on_text": "",
+            "ui_off_text": ""
+        },
+        {
+            "key": "field_5df6c18b6b423",
+            "label": "Page Banner",
+            "name": "page_banner_optional",
+            "type": "image",
+            "instructions": "Required image dimensions: 1400x220",
+            "required": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_5e1b5ac3d6501",
+                        "operator": "==",
+                        "value": "1"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "return_format": "array",
+            "preview_size": "full",
+            "library": "all",
+            "min_width": 1400,
+            "min_height": 220,
+            "min_size": "",
+            "max_width": 1400,
+            "max_height": 220,
+            "max_size": "",
+            "mime_types": ""
+        },
+        {
+            "key": "field_5df6c1ae6b424",
+            "label": "Page Banner Text (Optional)",
+            "name": "page_banner_text",
+            "type": "text",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_5e1b5ac3d6501",
+                        "operator": "==",
+                        "value": "1"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": "",
+            "maxlength": ""
+        },
+        {
+            "key": "field_5e113a5874036",
+            "label": "Enable Back Button",
+            "name": "enable_back_button",
+            "type": "true_false",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "message": "",
+            "default_value": 0,
+            "ui": 0,
+            "ui_on_text": "",
+            "ui_off_text": ""
+        },
+        {
+            "key": "field_5e113a0674035",
+            "label": "Back Button Text",
+            "name": "back_button_text",
+            "type": "text",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_5e113a5874036",
+                        "operator": "==",
+                        "value": "1"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "Go to Previous Section",
+            "placeholder": "",
+            "prepend": "",
+            "append": "",
+            "maxlength": ""
+        },
+        {
+            "key": "field_5df6c1d76b426",
+            "label": "Hide Page Title",
+            "name": "hide_page_title",
+            "type": "true_false",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "message": "",
+            "default_value": 0,
+            "ui": 0,
+            "ui_on_text": "",
+            "ui_off_text": ""
+        }
+    ],
+    "location": [
+        [
+            {
+                "param": "post_type",
+                "operator": "==",
+                "value": "page"
+            }
+        ]
+    ],
+    "menu_order": 0,
+    "position": "normal",
+    "style": "default",
+    "label_placement": "top",
+    "instruction_placement": "label",
+    "hide_on_screen": [
+        "the_content"
+    ],
+    "active": 1,
+    "description": "",
+    "modified": 1578971681
+}

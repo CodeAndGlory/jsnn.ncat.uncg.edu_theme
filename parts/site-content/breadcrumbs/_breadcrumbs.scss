@@ -1,0 +1,38 @@
+@import "../../mixins/index";
+@import "../../variables/index";
+
+.breadcrumbs {
+	@include universal-max-width;
+	@include universal-padding;
+
+	margin-bottom: 57px;
+	color: #606166;
+	font-family: Arial, serif;
+	font-size: 14px;
+	text-transform: uppercase;
+
+	& > span {
+		padding-right: 4px;
+		padding-left: 4px;
+
+		&:first-child {
+			padding-left: 0;
+		}
+	}
+
+	a {
+		color: #606166;
+		text-decoration: none;
+		&:hover,
+		&:focus {
+			text-decoration: underline;
+		}
+	}
+}
+
+@include bp($breakpoint__xl) {
+	.breadcrumbs {
+		padding-right: 20px;
+		padding-left: 20px;
+	}
+}

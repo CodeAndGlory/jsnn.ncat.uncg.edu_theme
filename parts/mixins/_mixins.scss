@@ -1,0 +1,186 @@
+@import "../variables/index";
+
+// Center block
+@mixin center-block {
+	display: block;
+	margin-right: auto;
+	margin-left: auto;
+}
+
+// Clearfix
+@mixin clearfix {
+	display: table;
+	table-layout: fixed;
+	content: "";
+}
+
+// Clear after (not all clearfix need this also)
+@mixin clearfix-after {
+	clear: both;
+}
+
+// Breakpoints
+@mixin bp($sizeValue) {
+	@media screen and (min-width: $sizeValue) {
+		@content;
+	}
+}
+
+@mixin universal-padding {
+	@include bp($breakpoint__sm) {
+		padding-right: $padding__tablet;
+		padding-left: $padding__tablet;
+	}
+	@include bp($breakpoint__xl) {
+		padding-right: $padding__full;
+		padding-left: $padding__full;
+	}
+
+	padding-right: $padding__mobile;
+	padding-left: $padding__mobile;
+}
+
+@mixin universal-max-width {
+	@include bp($breakpoint__xl) {
+		max-width: $breakpoint__xl;
+		margin-right: auto;
+		margin-left: auto;
+		padding-right: 0;
+		padding-left: 0;
+	}
+}
+
+@mixin universal-reset {
+	@include bp($breakpoint__sm) {
+		padding-right: 0;
+		padding-left: 0;
+	}
+	@include bp($breakpoint__xl) {
+		padding-right: 0;
+		padding-left: 0;
+	}
+
+	max-width: 100%;
+	margin-right: 0;
+	margin-left: 0;
+}
+
+@mixin side-nav-padding($class) {
+	@include bp($breakpoint__sm) {
+		.has-side-nav .#{$class} {
+			@include universal-reset;
+		}
+	}
+}
+
+@mixin universal-bottom-margin {
+	margin-bottom: $margin__bottom;
+}
+
+@mixin bottom-border {
+	border-bottom: 1px solid $color__gray-md;
+}
+
+@mixin top-border {
+	border-top: 1px solid $color__gray-md;
+}
+
+@mixin apply-icon($color, $color-hover) {
+	background-image: url("images/icons/apply.svg");
+	background-repeat: no-repeat;
+	background-position: center 5px;
+	background-size: 26.6px 20.9px;
+
+	&::after {
+		width: 0;
+		height: 0;
+		// cache image for rollover (ran out of time in project to properly make svgs inline, sorry future developer)
+		background-image: url("images/icons/apply-hover.svg");
+		content: "";
+	}
+
+	&:hover,
+	&:focus {
+		background-image: url("images/icons/apply-hover.svg");
+	}
+}
+
+@mixin reserve-icon($color, $color-hover) {
+	background-image: url("images/icons/reserve.svg");
+	background-repeat: no-repeat;
+	background-position: center 5px;
+	background-size: 23.8px 23.94px;
+
+	&::after {
+		width: 0;
+		height: 0;
+		// cache image for rollover (ran out of time in project to properly make svgs inline, sorry future developer)
+		background-image: url("images/icons/reserve-hover.svg");
+		content: "";
+	}
+
+	&:hover,
+	&:focus {
+		background-image: url("images/icons/reserve-hover.svg");
+	}
+}
+
+@mixin contact-icon($color, $color-hover) {
+	background-image: url("images/icons/contact.svg");
+	background-repeat: no-repeat;
+	background-position: center 5px;
+	background-size: 24.03px 23.07px;
+
+	&::after {
+		width: 0;
+		height: 0;
+		// cache image for rollover (ran out of time in project to properly make svgs inline, sorry future developer)
+		background-image: url("images/icons/contact-hover.svg");
+		content: "";
+	}
+
+	&:hover,
+	&:focus {
+		background-image: url("images/icons/contact-hover.svg");
+	}
+}
+
+@mixin give-icon($color, $color-hover) {
+	background-image: url("images/icons/give.svg");
+	background-repeat: no-repeat;
+	background-position: center 5px;
+	background-size: 13.9px 22.71px;
+
+	&::after {
+		width: 0;
+		height: 0;
+		// cache image for rollover (ran out of time in project to properly make svgs inline, sorry future developer)
+		background-image: url("images/icons/give-hover.svg");
+		content: "";
+	}
+
+	&:hover,
+	&:focus {
+		background-image: url("images/icons/give-hover.svg");
+	}
+}
+
+/// Replace `$search` with `$replace` in `$string`
+/// @author Hugo Giraudel
+/// @param {String} $string - Initial string
+/// @param {String} $search - Substring to replace
+/// @param {String} $replace ('') - New value
+/// @return {String} - Updated string
+@function str-replace($string, $search, $replace: "") {
+	$index: str-index($string, $search);
+
+	@if $index {
+		@return str-slice($string, 1, $index - 1) + $replace + str-replace(str-slice($string, $index + str-length($search)), $search, $replace);
+	}
+
+	@return $string;
+}
+
+@function encodecolor($hexcode) {
+	@return unquote(str-replace(quote($hexcode), "#", "%23"));
+}

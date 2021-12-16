@@ -1,0 +1,37 @@
+@import "../../../mixins/index";
+@import "../../../variables/index";
+
+.buttons-content {
+	@include universal-max-width;
+	@include universal-padding;
+	@include universal-bottom-margin;
+}
+
+.buttons-content a,
+a.button-link {
+	display: inline-block;
+	position: relative;
+	margin-right: 10px;
+	margin-bottom: 10px;
+	padding: 13px 25px 17px 25px;
+	border-radius: 5px;
+	background: $color__link;
+	font-family: $font__secondary;
+	font-size: 21px;
+	font-weight: bold;
+	text-decoration: none;
+	text-transform: uppercase;
+
+	&,
+	&:focus,
+	&:visited {
+		color: #fff;
+	}
+
+	&:hover,
+	&:focus {
+		color: #fff;
+	}
+}
+
+@include side-nav-padding(buttons-content);

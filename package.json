@@ -1,0 +1,39 @@
+{
+  "name": "uncg-online-base-theme",
+  "version": "1.0.0",
+  "description": "UNCG Online Base Theme",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://bitbucket.org/uncgonline/uncg_online_base_theme.git"
+  },
+  "author": "UNCG Online",
+  "license": "ISC",
+  "devDependencies": {
+    "@babel/core": "^7.4.5",
+    "autoprefixer": "^9.6.0",
+    "browser-sync": "^2.26.7",
+    "cssnano": "^4.1.10",
+    "gulp": "^4.0.2",
+    "gulp-babel-minify": "^0.5.0",
+    "gulp-concat": "^2.6.1",
+    "gulp-csscomb": "^3.0.8",
+    "gulp-notify": "^3.2.0",
+    "gulp-plumber": "^1.2.1",
+    "gulp-postcss": "^8.0.0",
+    "gulp-sass": "^4.0.2",
+    "gulp-sourcemaps": "^2.6.5",
+    "mathsass": "^0.10.1"
+  },
+  "dependencies": {
+    "minimatch": "^3.0.4"
+  },
+  "browserslist": [
+    "last 2 versions",
+    "ie 8",
+    "ie 9"
+  ]
+}

@@ -1,0 +1,45 @@
+@import "../../mixins/index";
+@import "../../variables/index";
+
+.page-banner {
+	@include universal-max-width;
+
+	display: flex;
+	height: 220px;
+	margin-bottom: 12px;
+	padding-right: $padding__mobile;
+	padding-left: $padding__mobile;
+	background-position-x: center;
+
+	p,
+	h1 {
+		margin: auto;
+		color: $color__white;
+		font-family: $font__secondary;
+		font-size: 45px;
+		font-weight: bold;
+		line-height: 1.2;
+		text-align: center;
+		text-transform: uppercase;
+	}
+}
+
+@include bp($breakpoint__md) {
+	.page-banner {
+		p,
+		h1 {
+			font-size: 60px;
+		}
+	}
+}
+
+hr.page-divider {
+	@include universal-max-width;
+
+	height: 1px;
+	margin: 0 0 12px 0;
+}
+
+hr.page-divider.no-breadcrumbs {
+	margin-bottom: 57px;
+}

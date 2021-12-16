@@ -1,0 +1,71 @@
+@import "../../../mixins/index";
+@import "../../../variables/index";
+
+.directory-profile-content {
+	@include universal-max-width;
+	@include universal-padding;
+	@include universal-bottom-margin;
+
+	padding-bottom: 50px;
+	font-size: 21px;
+
+	img {
+		width: 100%;
+		max-width: 450px;
+		margin-bottom: 25px;
+	}
+
+	ul {
+		margin: 0;
+		padding: 0;
+		list-style: none;
+	}
+
+	h2 {
+		margin-bottom: 2px;
+	}
+
+	.directory-profile-details {
+		margin-bottom: 28px;
+
+		li:nth-child(2) {
+			margin-top: 20px;
+		}
+	}
+
+	.directory-profile-icon-links {
+		display: flex;
+
+		a {
+			display: block;
+			margin-right: 16px;
+		}
+
+		svg {
+			width: 34px;
+			height: 34px;
+
+			.st0 {
+				fill: $color__blue-dk;
+			}
+		}
+	}
+}
+
+@include side-nav-padding(directory-profile-content);
+
+@include bp($breakpoint__sm) {
+	.directory-profile-content {
+		display: flex;
+
+		img {
+			margin-bottom: 0;
+		}
+
+		.directory-profile-details-wrapper {
+			margin-left: 36px;
+
+			align-self: flex-end;
+		}
+	}
+}

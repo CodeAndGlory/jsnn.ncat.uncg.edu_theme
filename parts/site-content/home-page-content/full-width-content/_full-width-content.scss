@@ -1,0 +1,16 @@
+@import "../../../mixins/index";
+@import "../../../variables/index";
+
+.full-width-content {
+	@include universal-max-width;
+	@include universal-padding;
+	@include universal-bottom-margin;
+
+	font-size: 20px;
+}
+
+@include bp($breakpoint__lg) {
+	.full-width-content {
+		font-size: 24px;
+	}
+}

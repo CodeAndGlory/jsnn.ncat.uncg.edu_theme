@@ -1,0 +1,39 @@
+@import "colors";
+
+@font-face {
+	font-family: "Pluto Sans";
+	src: url(fonts/pluto_sans.woff);
+}
+
+@font-face {
+	font-family: "Sofia Pro";
+	src: url(fonts/SofiaW03-Regular.woff);
+}
+
+@font-face {
+	font-family: "Sofia Pro";
+	src: url(fonts/SofiaW03-Bold.woff);
+	font-weight: 700;
+}
+
+@font-face {
+	font-family: "Sofia Pro";
+	src: url(fonts/SofiaW03-RegularItalic.woff);
+	font-style: italic;
+}
+
+@font-face {
+	font-family: "Sofia Pro";
+	src: url(fonts/SofiaW03-BoldItalic.woff);
+	font-weight: 700;
+	font-style: italic;
+}
+
+$font__main: "Sofia Pro", sans-serif;
+$font__weight-light: 300;
+$font__weight-regular: 400;
+$font__weight-medium: 500;
+$font__secondary: "Sofia Pro";
+$font__intro-text: "Times New Roman", sans-serif;
+$font__code: monaco, consolas, "Andale Mono", "DejaVu Sans Mono", monospace;
+$color__text-main: $color__black;

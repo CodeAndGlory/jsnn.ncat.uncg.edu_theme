@@ -1,0 +1,13 @@
+@import "../../../mixins/index";
+@import "../../../variables/index";
+
+.intro-content {
+	@include universal-max-width;
+	@include universal-padding;
+	@include universal-bottom-margin;
+
+	font-family: $font__intro-text;
+	font-size: 26px;
+}
+
+@include side-nav-padding(intro-content);

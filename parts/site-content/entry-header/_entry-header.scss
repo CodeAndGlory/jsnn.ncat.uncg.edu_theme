@@ -1,0 +1,9 @@
+@import "../../mixins/index";
+@import "../../variables/index";
+
+.entry-header {
+	@include universal-max-width;
+	@include universal-padding;
+}
+
+@include side-nav-padding(entry-header);

@@ -1,0 +1,25 @@
+@import "../../../mixins/index";
+@import "../../../variables/index";
+
+.mission-block {
+	@include universal-max-width;
+	@include universal-padding;
+	@include universal-bottom-margin;
+
+	overflow: hidden;
+	padding-top: 32px;
+	color: #fff;
+	font-size: 20px;
+	text-align: center;
+
+	h2 {
+		margin-top: 0;
+		color: #fff;
+	}
+}
+
+@include bp($breakpoint__lg) {
+	.mission-block {
+		font-size: 24px;
+	}
+}

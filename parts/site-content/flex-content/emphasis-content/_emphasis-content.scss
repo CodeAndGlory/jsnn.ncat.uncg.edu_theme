@@ -1,0 +1,13 @@
+@import "../../../mixins/index";
+@import "../../../variables/index";
+
+.emphasis-content {
+	@include universal-max-width;
+	@include universal-padding;
+
+	margin-bottom: 80px;
+	color: #036;
+	font-size: 21px;
+}
+
+@include side-nav-padding(emphasis-content);

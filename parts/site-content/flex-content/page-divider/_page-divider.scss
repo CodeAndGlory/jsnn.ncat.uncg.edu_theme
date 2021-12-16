@@ -1,0 +1,9 @@
+@import "../../../mixins/index";
+@import "../../../variables/index";
+
+.section-page-divider {
+	@include universal-max-width;
+	@include universal-bottom-margin;
+}
+
+@include side-nav-padding(section-page-divider);

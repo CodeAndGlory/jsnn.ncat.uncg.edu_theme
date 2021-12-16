@@ -1,0 +1,10 @@
+@import "../../../mixins/index";
+@import "../../../variables/index";
+
+.content {
+	@include universal-max-width;
+	@include universal-padding;
+	@include universal-bottom-margin;
+}
+
+@include side-nav-padding(content);
